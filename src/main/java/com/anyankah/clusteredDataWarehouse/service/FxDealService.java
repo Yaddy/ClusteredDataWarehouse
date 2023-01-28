@@ -8,6 +8,8 @@ public interface FxDealService {
 
     FxDealOrderDTO createFxDeal(FxDealOrderDTO fxDealOrderDTO);
 
+    FxDealOrderDTO getFxDealById(Long id);
+
     List<FxDealOrderDTO> getAllFxDeals();
 
 }

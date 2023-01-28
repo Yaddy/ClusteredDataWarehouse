@@ -16,16 +16,17 @@ import java.util.Currency;
 public class FxDeal {
 
     @Id
-    @Column
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(unique = true)
+    private Long id;
 
     @NotNull(message ="Field cannot be null")
     @Column(name = "from_currency", nullable = false)
-    private Currency fromCurrency;
+    private Currency orderingCurrency;
 
     @NotNull(message ="Field cannot be null")
     @Column(name = "", nullable = false)
-    private Currency toCurrency;
+    private Currency convertingCurrency;
 
     @Column(name = "fxDeal_timestamp", nullable = false)
     private LocalDateTime orderTimeStamp;
