@@ -1,21 +1,20 @@
 package com.anyankah.clusteredDataWarehouse.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Currency;
 
-@Data
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class FxDealOrderDTO {
 
 
-    @Id
     private String id;
 
     private Currency orderingCurrency;
